@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --verde: #1D9E75;
+  --verde-claro: #5DCAA5;
+  --verde-oscuro: #0F6E56;
+  --fondo: #0f0f0f;
+  --fondo-card: #1a1a1a;
+  --texto: #f0f0f0;
+  --texto-suave: #888;
+  --borde: #2a2a2a;
+}
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: var(--fondo-card);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--verde-claro);
+  text-align: center;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--verde-claro);
+  text-align: center;
+}
+input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 18px;
+  background: #111;
+  border: 1.5px solid var(--borde);
+  border-radius: 10px;
+  color: var(--texto);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: var(--verde);
+}
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+article {
+  background: #111;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+article:hover {
+  border-color: var(--verde);
+  transform: translateY(-2px);
+}
+
+article h2 {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--verde-claro);
+  margin-bottom: 8px;
+}
+
+article p {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--texto);
+}
+#resultado {
+  font-size: 13px;
+  color: var(--texto-suave);
+  text-align: center;
+  min-height: 36px;
+  line-height: 1.5;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background: var(--verde);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: var(--verde-claro);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+#termometro {
+  width: 20px;
+  height: 150px;
+  border: 2px solid var(--verde);
+  border-radius: 10px;
+  background: #111;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+}
+
+#barraMovimiento {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10%;
+  background: var(--verde);
+  border-radius: 10px;
+  transition: height 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background 0.4s ease;
+}

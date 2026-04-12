@@ -1,13 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Temperatura</title>
-</head>
-<body>
-  <input id="inputTemperatura" type="text" placeholder="Escrila temperatura en Celsius">
-  <button id="btn">convertir</button>
-  <p id="resultado"></p>
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Temperatura</title>
+  </head>
+  <body>
+    <main>
+      <h1>Conversor de temperatura</h1>
+
+      <div id="termometro">
+        <div id="barraMovimiento"></div>
+      </div>
+
+      <input
+        id="inputTemperatura"
+        type="number"
+        placeholder="Escribe temperatura en Celsius"
+      />
+
+      <section>
+        <article>
+          <h2>Kelvin</h2>
+          <p id="valorKelvin">--</p>
+        </article>
+
+        <article>
+          <h2>Fahrenheit</h2>
+          <p id="valorFahrenheit">--</p>
+        </article>
+      </section>
+
+      <p id="resultado"></p>
+
+      <button id="btn">convertir</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
